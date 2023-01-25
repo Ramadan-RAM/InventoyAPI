@@ -1,0 +1,45 @@
+﻿Create table taype of dataTable type
+
+
+USE [ERP_DBAngularApi]
+GO
+
+CREATE TYPE [dbo].[DistributeProduct] AS TABLE(
+	[StoreId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL
+)
+GO
+
+
+-------------------------------------------
+
+
+USE [ERP_DBAngularApi]
+GO
+
+CREATE TYPE [dbo].[PurchasDataTable] AS TABLE(
+	[CategoryId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[PurchasesPrice] [decimal](18, 2) NULL,
+	[ItemQuantity] [int] NULL,
+	[ItemValue] [decimal](18, 2) NULL
+)
+GO
+
+
+------------------------------------------------------
+
+
+
+USE [ERP_DBAngularApi]
+GO
+
+CREATE TYPE [dbo].[SalseDataTable] AS TABLE(
+	[CategoryId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[SalesPrice] [decimal](18, 2) NULL,
+	[ItemQuantity] [int] NULL,
+	[ItemValue] [decimal](18, 2) NULL
+)
+GO
+
